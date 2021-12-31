@@ -5,5 +5,6 @@ from app1 import views
 
 urlpatterns=[
     path('index/',views.index,name='index'),
-    path('checkPrime/',views.checkPrime,name='check_prime')
+    path('checkPrime/',views.checkPrime,name='check_prime'),
+    path('checkAmstrong/',views.checkAmstrong,name='check_Amstrong')
 ]

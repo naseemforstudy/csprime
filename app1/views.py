@@ -28,6 +28,30 @@ def checkPrime(request):
     else:
         status = "This number is not a prime number"
     return Response(status)
+
+#program to check Armstrong number
+
+@api_view(["GET"])
+def checkAmstrong(request):
+    number = int(request.GET.get("number"))
+    sum = 0
+    temp = number
+    while temp>0:
+        digit = temp % 10
+        sum += digit ** 3
+        temp //= 10
+    if number == sum:
+        status  = "Given number is an Amstrong number"
+    else:
+        status = "Given number is not an Amstrong number"
+    return Response(status)
+        
+        
+    
+        
+        
+    
+    
         
     
     
